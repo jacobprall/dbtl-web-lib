@@ -1,5 +1,11 @@
 import type { Preview } from "@storybook/react";
+import theme from "../src/theme";
 
+export const parameters = {
+  chakra: {
+    theme,
+  },
+}
 const preview: Preview = {
   parameters: {
     controls: {
@@ -8,6 +14,7 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    ...parameters,
   },
 };
 
